@@ -89,6 +89,9 @@ function myFunction() {
         .catch(function (error) {
             // handle error
             console.log(error);
+            
+            // update the percent bar anyways
+            updatePercentBar();
         })
         .then(function () {
             // always executed
