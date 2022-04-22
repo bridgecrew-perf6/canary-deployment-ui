@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Page tester !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>API Tester for canary deployments</h1>
+    <p>This page tests the deployment of a canary application, by doing constant requests to the configured server.</p>
+    <p>The server should have a /version page accessible.</p>
+
+    <h2>Requests sent the last 30s</h2>
+    <div id="percentbar">
+        <div style="width: 10%" class="red">1</div>
+        <div style="width: 10%" class="green">1</div>
+    </div>
+
+    <h2>Logs</h2>
+    <div id="logsdiv">
+        <table>
+            <thead>
+                <tr>
+                    <td>Time</td>
+                    <td>Response</td>
+                </tr>
+            </thead>
+            <tbody id="logs">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
