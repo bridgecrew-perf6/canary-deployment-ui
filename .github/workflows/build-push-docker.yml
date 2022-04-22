@@ -44,6 +44,7 @@ jobs:
           build-args: |
             VERSION=${{ env.VERSION }}-ying
           tags: |
+            ${{ env.IMAGE_PREFIX }}:ying
             ${{ env.IMAGE_PREFIX }}:latest
             ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}-ying
             ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}
@@ -56,5 +57,6 @@ jobs:
           build-args: |
             VERSION=${{ env.VERSION }}-yang
           tags: |
+            ${{ env.IMAGE_PREFIX }}:yang
             ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}-yang
             

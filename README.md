@@ -12,6 +12,13 @@ There are multiple available tags on the dockerhub repository. Use the `latest` 
 
 For each version there will be two semi-identical images, `ying` and `yang`.
 
+```bash
+docker run -p 8080:8080 kalioz/canary-deployment-ui:ying
+# ctrl-c
+docker run -p 8080:8080 kalioz/canary-deployment-ui:yang
+```
+
+
 The image is published on the repository [kalioz/canary-deployment-ui](https://hub.docker.com/r/kalioz/canary-deployment-ui)
 
 See [kalioz/canary-deployment-ui](https://github.com/kalioz/canary-deployment-ui) for more information.
