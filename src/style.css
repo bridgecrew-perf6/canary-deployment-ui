@@ -67,6 +67,8 @@ td {
 #logsdiv {
     width: 100%;
     margin: auto;
+    max-height: calc(65vh);
+    overflow: scroll;
 }
 
 body {
