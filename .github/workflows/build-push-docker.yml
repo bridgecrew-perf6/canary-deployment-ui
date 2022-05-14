@@ -37,7 +37,7 @@ jobs:
         run: echo "VERSION=$(cat src/version)" >> $GITHUB_ENV
 
       -
-        name: Build and push
+        name: Build and push - ying
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -50,7 +50,7 @@ jobs:
             ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}
 
       -
-        name: Build and push
+        name: Build and push - yang
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -59,4 +59,16 @@ jobs:
           tags: |
             ${{ env.IMAGE_PREFIX }}:yang
             ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}-yang
+
+      -
+        name: Build and push - broken image
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          build-args: |
+            VERSION=${{ env.VERSION }}-broken
+          tags: |
+            ${{ env.IMAGE_PREFIX }}:broken
+            ${{ env.IMAGE_PREFIX }}:${{ env.VERSION }}-broken
+          target: broken
             
